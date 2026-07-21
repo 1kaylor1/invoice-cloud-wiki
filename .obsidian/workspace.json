@@ -1,0 +1,278 @@
+{
+  "main": {
+    "id": "ee1bc3725c3c3885",
+    "type": "split",
+    "children": [
+      {
+        "id": "4e1f7f938d80c118",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "37b19f3bd8bc5e01",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01LTC（商机到回款）/01商机管理/01商机录入/商机录入流程.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "商机录入流程"
+            }
+          },
+          {
+            "id": "9f8f26030f29dbc1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01LTC（商机到回款）/04订单管理/02订单创建流程/05租户绑定.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "05租户绑定"
+            }
+          },
+          {
+            "id": "c9d39607297959b6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01LTC（商机到回款）/04订单管理/02订单创建流程/01订单创建来源-合同下推.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "01订单创建来源-合同下推"
+            }
+          },
+          {
+            "id": "8e6328e8332e0414",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 生态伙伴管理（MTR）/发票云生态伙伴/伙伴生命周期管理/03伙伴支持-伙伴升降级申请说明.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "03伙伴支持-伙伴升降级申请说明"
+            }
+          },
+          {
+            "id": "4039a311c281a34b",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f92b3468b5f9ce73",
+    "type": "split",
+    "children": [
+      {
+        "id": "c3c4236e0a148d20",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "90814663dfca7631",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byCreatedTimeReverse",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "244f7bff4d62826f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "39ad5909310aa5d7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 371.5
+  },
+  "right": {
+    "id": "bfc310e7ebfe13bc",
+    "type": "split",
+    "children": [
+      {
+        "id": "6c299ed8f36048eb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c35c1da65fe4fd8f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "01LTC（商机到回款）/04订单管理/04许可管理/许可激活后管理/许可注销.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "许可注销 的反向链接列表"
+            }
+          },
+          {
+            "id": "d2877f618b396b6a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "be9b32057c9f491d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "2afb38998c4a5deb",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "ec4abd145e347114",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "90814663dfca7631",
+  "lastOpenFiles": [
+    "02 生态伙伴管理（MTR）/发票云生态伙伴/伙伴生命周期管理/02伙伴支持-信息变更操作指引.md",
+    "01 商机到回款（LTC）/金蝶中国渠道/02售前支持/04测试授权申请/测试授权申请操作指引.md",
+    "02 生态伙伴管理（MTR）/金蝶中国生态伙伴",
+    "02 生态伙伴管理（MTR）/发票云生态伙伴",
+    "01LTC（商机到回款）/发票云自营渠道/未命名",
+    "01 商机到回款（LTC）/发票云自营渠道/续约管理",
+    "01 商机到回款（LTC）/金蝶中国渠道/02售前支持/05售前工具说明-票省事小程序.md",
+    "01 商机到回款（LTC）/金蝶中国渠道/02售前支持/02售前顾问预约/02售前顾问预约操作指引-票省事小程序.md",
+    "01 商机到回款（LTC）/发票云自营渠道/产品交付（许可管理）",
+    "01 商机到回款（LTC）/发票云自营渠道/订单管理",
+    "01 商机到回款（LTC）/发票云自营渠道/合同管理",
+    "01 商机到回款（LTC）/发票云自营渠道/商机与售前",
+    "01 商机到回款（LTC）/发票云自营渠道",
+    "01 商机到回款（LTC）/金蝶中国渠道",
+    "01 商机到回款（LTC）/金蝶中国渠道/02售前支持/02售前顾问预约/01售前顾问查询列表.md",
+    "01 商机到回款（LTC）/金蝶中国渠道/02售前支持/03产品报价查询/01自助获取产品报价-票省事小程序.md",
+    "00导航与索引/00索引页.md",
+    "01 商机到回款（LTC）/金蝶中国渠道/续约管理/索引页.md",
+    "01 商机到回款（LTC）/01索引页.md",
+    "01 商机到回款（LTC）/金蝶中国渠道/04订单管理/01订单类型/01订单分类说明.md",
+    "01 商机到回款（LTC）/金蝶中国渠道/03合同管理/01合同类型/01合同类型说明.md",
+    "01 商机到回款（LTC）/LTC流程总览/02发票云销售渠道分类说明.md",
+    "01 商机到回款（LTC）/金蝶中国渠道/01商机管理/06商机结案/02输单归档操作说明.md",
+    "01 商机到回款（LTC）/金蝶中国渠道/01商机管理/06商机结案/01赢单移交操作规范.md",
+    "01 商机到回款（LTC）/金蝶中国渠道/01商机管理/02商机推进与跟踪/01商机各流转状态说明.md",
+    "01 商机到回款（LTC）/金蝶中国渠道/01商机管理/01商机录入/01商机录入路径指引.md",
+    "01 商机到回款（LTC）/金蝶中国渠道/04订单管理/02订单创建流程/07许可生成与申请.md",
+    "01 商机到回款（LTC）/金蝶中国渠道/04订单管理/02订单创建流程/04订单配置-租户绑定.md",
+    "01 商机到回款（LTC）/金蝶中国渠道/03合同管理/02合同创建流程/02非标合同创建操作指引.md",
+    "01 商机到回款（LTC）/金蝶中国渠道/03合同管理/02合同创建流程/01标准合同创建操作指引.md",
+    "01 商机到回款（LTC）/金蝶中国渠道/03合同管理/03合同审批流程/01标准合同审批路径.md",
+    "01 商机到回款（LTC）/LTC流程总览/01LTC生命周期全景说明.md",
+    "02 生态伙伴管理（MTR）/03索引页.md",
+    "00导航与索引/术语表.md",
+    "未命名.canvas",
+    "01 商机到回款（LTC）/金蝶中国渠道/05回款管理/03后付款结算流程/02分期后付款结算流程.md",
+    "01 商机到回款（LTC）/金蝶中国渠道/05回款管理/03后付款结算流程/01一次性后付款结算流程.md",
+    "Pasted image 20260720173011.png"
+  ]
+}
