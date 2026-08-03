@@ -1,91 +1,104 @@
 ---
 name: wiki-loop
-description: 发票云Wiki知识库完整书写流程调度器。串联 wiki-write、wiki-lint、wiki-faq-review 三个独立 skill，全部完成后输出结论报告给用户。
+description: 发票云Wiki知识库书写+初审调度器。遍历README中所有文章，自动从飞书知识库找原始材料、起草、初审，输出结论报告给用户。FAQ终审由wiki-faq-loop单独跑。
 ---
 
-# wiki-loop：Wiki 完整书写流程调度器
+# wiki-loop：Wiki 书写+初审调度器
 
 ## 触发方式
 
-用户输入 `/wiki-loop` 并提供以下信息时启动：
-- 原始材料（飞书文档链接 / 口述内容）
-- FAQ 文档路径
+用户输入 `/wiki-loop` 启动。
+
+一次 loop = 遍历知识库所有文章，能写的写完并通过 lint，不能写的列出原因。全部处理完后输出报告给用户。
 
 ---
 
 ## 执行流程
 
-### 阶段一：书写
+### 第一步：读取文章列表
 
-启动子 agent，调用 wiki-write skill，执行以下动作：
-1. 覆盖度评估，输出表格
-2. 等用户确认哪些文章可写
-3. 批量起草所有 ✅ 和 ⚠️ 文章
-4. 一次性输出所有草稿给用户
+读取 `0导航与索引/README.md`，提取所有文章的路径和描述，建立待处理列表。
 
-**等用户确认草稿内容准确后，进入阶段二。**
+跳过以下文章（不在处理范围）：
+- 已标注"待完善"且无 description 的空文件
+- README.md 本身
 
 ---
 
-### 阶段二：初审（wiki-lint）
+### 第二步：逐篇查找原始材料
 
-对阶段一产出的每篇文章，**各自启动一个独立无记忆子 agent**，调用 wiki-lint skill：
+对每篇文章，按以下优先级在飞书知识库查找原始材料：
 
-```
-for 每篇文章:
-    启动独立子 agent（无书写阶段上下文）
-    执行 wiki-lint <文章路径>
-    自动修复所有阻断项
-    直到该篇阻断项清零
-```
+**查找步骤：**
+1. 先读对应知识库的目录树（不读全文），根据文章标题和 description 定位最相关节点
+2. 找到相关节点后，读取具体文章内容
+3. 判断可写程度：
 
-**所有文章阻断项全部清零后，进入阶段三。**
+| 可写程度 | 判断标准 | 处理方式 |
+|---|---|---|
+| ✅ 可写 | 找到完整原始文档，内容可信 | 起草文章 |
+| ⚠️ 部分可写 | 找到片段信息，有框架但细节不全 | 起草框架，关键细节标【待确认】 |
+| ❌ 不可写 | 完全找不到原始材料 | 跳过，记录在报告里 |
+
+**飞书知识库查找优先级：**
+
+主要参考（优先找这两个）：
+- 知识与运营部：https://icn1dae2f6c3.feishu.cn/wiki/RHxgwuPLEiyJQQkGqFYcj3nBnUf
+- 运营管理：https://icn1dae2f6c3.feishu.cn/wiki/TjmQwa4Eui65wakW1DqcsgEQnvh
+
+补充参考（主要参考找不到时再找）：
+- 交付服务（对外）：https://icn1dae2f6c3.feishu.cn/wiki/NgZ3wbivFixNUckxyrlcfU7Wndh
+- 营销管理（对内）：https://icn1dae2f6c3.feishu.cn/wiki/HYBmwUn27iQj87k0Kamc6PbWngf
+- 营销管理（对外）：https://icn1dae2f6c3.feishu.cn/wiki/DA74wuEK3iED4wkfm1xcFKUInjb
+- 交付管理（对内）：https://icn1dae2f6c3.feishu.cn/wiki/I8UWwVvLGiimIHkc0xhcuAmgnQb
+- 产研工程：https://icn1dae2f6c3.feishu.cn/wiki/UeXnw7f8jivAcykqINUcdtZWnVf
+- 伙伴管理（对外）：https://icn1dae2f6c3.feishu.cn/wiki/W3IzwdlAWisu3fkJ2V7c3HVGnhd
+- 国际区产品：https://icn1dae2f6c3.feishu.cn/wiki/MZT3wW6NyiGpfzk6btBc2haCnLb
+- 中国区产品（对外）：https://icn1dae2f6c3.feishu.cn/wiki/LWiYwnuC5iJYFLkj8fwcPXcWnIb
+- 国际产品部（内部）：https://icn1dae2f6c3.feishu.cn/wiki/VR3CwloD9iCPEMkoIOMc3BtSnfb
+- 中国区产品部门（对内）：https://icn1dae2f6c3.feishu.cn/wiki/ZllswsVphi0TItkv5v3cO3jbnLb
 
 ---
 
-### 阶段三：终审（FAQ 校验）
+### 第三步：批量起草
 
-启动独立无记忆子 agent，调用 wiki-faq-review skill：
+对所有 ✅ 和 ⚠️ 文章，按 wiki-write skill 规范起草。
 
-```
-传入：
-- FAQ 文档路径
-- 所有已通过 lint 的文章路径列表
-
-执行：
-- 逐条校验 FAQ
-- 不能覆盖的补充文章内容
-- 补充后重新跑 wiki-lint（独立子 agent）
-- 直到所有相关 FAQ 全部覆盖
-```
+起草完成后，**一次性输出所有草稿给用户确认**，等用户确认内容准确后进入第四步。
 
 ---
 
-### 阶段四：输出结论报告
+### 第四步：初审（wiki-lint）
 
-三个阶段全部完成后，汇总输出报告给用户：
+用户确认草稿后，对每篇文章**各自启动一个独立无记忆子 agent** 执行 wiki-lint：
+
+- 每篇文章独立子 agent，不共享书写阶段上下文
+- 自动修复所有阻断项，直到该篇阻断项清零
+- 所有文章阻断项全部清零后，进入第五步
+
+---
+
+### 第五步：输出结论报告
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📊 Wiki 书写完整报告
+📊 Wiki 书写+初审报告
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-📝 本次书写文章：<N> 篇
-⏭️ 跳过（原材料不足）：<N> 篇
+📝 本次处理文章总数：<N> 篇
+✅ 完成（通过lint）：<N> 篇
+⚠️ 部分完成（含【待确认】）：<N> 篇
+❌ 跳过（缺原始材料）：<N> 篇
 
-✅ 通过 lint + FAQ 终审：<N> 篇
+❌ 跳过的文章（需你补充原始材料后下次再跑）：
+- <文章路径>：<找不到的原因>
 
-📝 终审补充记录：
-- <文章路径>：补充了<说明>
-（如无则写"无"）
+⚠️ 需要你决策的【待确认】项：
+- <文章路径> → <待确认内容>
 
-⚠️ 需要你决策的项：
-- <问题描述>
-（如无则写"无"）
-
-❌ 仍有【待确认】标注需补充信息：
-- <文章路径>：<待确认项描述>
-（如无则写"无"）
+📋 下一步：
+- 补充以上缺失材料后，重新执行 /wiki-loop
+- FAQ 文档准备好后，执行 /wiki-faq-loop 做终审
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
@@ -93,7 +106,7 @@ for 每篇文章:
 
 ## 重要原则
 
-- **三个 skill 全部独立**：每个 skill 用独立子 agent 执行，互不共享上下文
-- **用户只在两个节点介入**：①确认覆盖度表格 ②确认草稿内容，其余全部自动跑
-- **FAQ 终审 skill 待完善**：当前为占位，等 wiki-faq-review skill 正式完成后生效
-- **阶段三补充文章后必须重跑 lint**：补充内容可能引入新的格式问题
+- **一次 loop 不一定能写完所有文章**，缺材料的文章下次补充材料后再跑
+- **loop 是迭代的**，每次跑完报告告诉你缺什么，你补充后继续跑，逐步完善
+- **lint 必须职责隔离**：每篇文章独立无记忆子 agent，不能用书写时的同一个 agent
+- **宁可不写，不可乱写**：找不到原始材料宁可标 ❌ 跳过，不自行脑补
