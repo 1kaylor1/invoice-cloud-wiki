@@ -78,7 +78,21 @@ description: 发票云Wiki知识库书写+初审调度器。遍历README中所�
 
 ---
 
-### 第五步：输出结论报告
+### 第五步：Git 存档
+
+输出报告前，在知识库目录下执行 git commit，标记本次 loop：
+
+```bash
+cd "E:/运营管理Wiki"
+git add -A
+git commit -m "wiki-loop #<N>：完成 <完成数> 篇，跳过 <跳过数> 篇，待确认 <待确认数> 项"
+```
+
+commit message 格式固定，`#<N>` 为本次 loop 的序号（第一次跑是 #1，第二次是 #2，依此类推）。序号从 git log 里统计已有的 wiki-loop commit 数量 +1 得出。
+
+---
+
+### 第六步：输出结论报告
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
