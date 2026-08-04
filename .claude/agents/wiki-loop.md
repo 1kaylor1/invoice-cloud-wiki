@@ -58,6 +58,15 @@ description: 发票云Wiki知识库书写+初审调度器。遍历README中所�
 - 国际产品部（内部）：https://icn1dae2f6c3.feishu.cn/wiki/VR3CwloD9iCPEMkoIOMc3BtSnfb
 - 中国区产品部门（对内）：https://icn1dae2f6c3.feishu.cn/wiki/ZllswsVphi0TItkv5v3cO3jbnLb
 
+会议纪要参考（辅助补充，语音识别可能有文字错误，仅作参考，不作主要来源）：
+- EOP Wiki 本地文档：E:\EOP-wiki（0430）
+- 会议纪要1：https://icn1dae2f6c3.feishu.cn/docx/TQyAdtHkKomjv5xRMXRcbtP0nfg
+- 会议纪要2：https://icn1dae2f6c3.feishu.cn/docx/KHoddBG06oj9BCxr1q6cIkjCnyh
+- 会议纪要3：https://icn1dae2f6c3.feishu.cn/docx/Nbi1dvTDSoWH7RxQ2xicA0wdnpf
+- 会议纪要4：https://icn1dae2f6c3.feishu.cn/docx/Ooj3dM8t1oHsTwxrLk5c6l7VnR5
+- 会议纪要5：https://icn1dae2f6c3.feishu.cn/docx/A05TdO7azo6ESqxawfnc9vVxnic
+- 会议纪要6：https://icn1dae2f6c3.feishu.cn/docx/Rjq2dd7Ico9hvoxKPQWcD14Znqh
+
 ---
 
 ### 第三步：批量起草
@@ -86,6 +95,7 @@ description: 发票云Wiki知识库书写+初审调度器。遍历README中所�
 cd "E:/运营管理Wiki"
 git add -A
 git commit -m "wiki-loop #<N>：完成 <完成数> 篇，跳过 <跳过数> 篇，待确认 <待确认数> 项"
+git push
 ```
 
 commit message 格式固定，`#<N>` 为本次 loop 的序号（第一次跑是 #1，第二次是 #2，依此类推）。序号从 git log 里统计已有的 wiki-loop commit 数量 +1 得出。
