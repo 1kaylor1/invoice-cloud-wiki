@@ -2,7 +2,7 @@
 type: explainer
 title: 高频问题解答（FAQ）
 description: 发票云运营知识库高频问题解答汇总，持续更新
-updated: 2026-07-29
+updated: 2026-08-04
 channel: 通用
 ---
 

@@ -2,7 +2,7 @@
 type: explainer
 title: LTC流程总览说明
 description: 发票云LTC（商机到回款）全流程概览，含金蝶中国渠道和发票云自营渠道两套流程的阶段划分和文章索引
-updated: 2026-08-03
+updated: 2026-08-04
 channel: 通用
 ---
 

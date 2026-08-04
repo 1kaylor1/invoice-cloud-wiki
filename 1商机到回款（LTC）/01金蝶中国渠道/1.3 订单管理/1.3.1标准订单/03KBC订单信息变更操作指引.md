@@ -2,7 +2,7 @@
 type: runbook
 title: KBC订单信息变更操作指引
 description: 金蝶中国渠道KBC订单信息需要变更时的处理操作步骤
-updated: 2026-07-29
+updated: 2026-08-04
 channel: 金蝶中国渠道
 related:
   - ../../../../../../0导航与索引/对接人与售后入口速查.md

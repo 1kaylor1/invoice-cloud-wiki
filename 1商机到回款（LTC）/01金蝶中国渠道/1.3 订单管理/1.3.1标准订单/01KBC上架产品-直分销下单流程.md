@@ -2,7 +2,7 @@
 type: explainer
 title: KBC上架产品直分销下单流程
 description: 金蝶中国渠道KBC上架产品的直销和分销下单流程入口说明
-updated: 2026-07-29
+updated: 2026-08-04
 channel: 金蝶中国渠道
 related:
   - ../../../../../2生态伙伴管理（MTR）/02金蝶中国生态伙伴/1.1伙伴订货-KBC分销下单操作指引.md

@@ -2,7 +2,7 @@
 type: explainer
 title: KBC未上架产品订单-第三方询价订单流程
 description: 金蝶中国渠道非KBC上架产品的第三方询价订单流程说明，与合同管理中的第三方询价合同关联
-updated: 2026-07-29
+updated: 2026-08-04
 channel: 金蝶中国渠道
 related:
   - ../../1.2 合同管理/1.2.1第三方询价合同流程说明.md

@@ -2,7 +2,7 @@
 type: explainer
 title: 1.2 合同管理（金蝶中国渠道）
 description: 金蝶中国渠道合同管理的边界说明，KBC合同由金蝶中国系统管理，发票云运营仅处理第三方询价合同
-updated: 2026-07-29
+updated: 2026-08-04
 channel: 金蝶中国渠道
 ---
 
