@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(lark-cli *)",
+      "Bash(LARKSUITE_CLI_NO_UPDATE_NOTIFIER=* lark-cli *)",
+      "Bash(LARKSUITE_CLI_NO_UPDATE_NOTIFIER=* LARKSUITE_CLI_NO_SKILLS_NOTIFIER=* lark-cli *)",
+      "Bash(echo * >> *migration-progress.txt*)",
+      "Bash(echo * >> *wiki-loop-progress.txt*)"
+    ]
+  }
+}
