@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01LTC（商机到回款）/04订单管理/04许可管理/许可激活后管理/许可注销.md",
+                "file": "3 客户信息管理（MCR）/3.2 租户主数据与信息变更/3.2.1 开票产品企业税号及税控设备变更操作.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "许可注销 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
@@ -169,8 +169,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -184,7 +183,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4039a311c281a34b",
+  "active": "c35c1da65fe4fd8f",
   "lastOpenFiles": [
     "3 客户信息管理（MCR）/3.2 租户主数据与信息变更/3.2.2 收票及影像产品使用企业信息变更指引.md",
     "3 客户信息管理（MCR）/3.2 租户主数据与信息变更/3.2.3 企业变更租户与跨租户合并处理操作.md",
